@@ -164,3 +164,12 @@ from [Portfoilio Projects].dbo.NashvilleHousing
 
 ALTER TABLE [Portfoilio Projects].dbo.NashvilleHousing
 DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress, SaleDate
+
+---------------------------------------------------------------------------------------------------------
+
+-- Count what type of Family have Land..
+
+Select Distinct(LandUse), COUNT(LandUse) As FamilyLandUsed
+From [Portfoilio Projects].dbo.NashvilleHousing
+Group by LandUse
+
